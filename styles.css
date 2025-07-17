@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f2f2f2;
+  --card-hover: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #333333;
+    --card-hover: #444444;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(18, 60px);
+  grid-auto-rows: 60px;
+  gap: 4px;
+  justify-content: center;
+}
+
+.element {
+  background: var(--card-bg);
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.element:hover {
+  background: var(--card-hover);
+  transform: scale(1.05);
+}
+
+.num {
+  font-size: 0.7rem;
+}
+
+.symbol {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 0.6rem;
+  text-align: center;
+}
